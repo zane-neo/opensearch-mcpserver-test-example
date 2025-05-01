@@ -4,7 +4,7 @@ This is an example project that can communicate to OpenSearch MCP APIs. Please r
 1. Start your OpenSearch cluster with security plugin disabled.
 2. Register MCP tools with the register mcp tools API:
 ```json
-POST /_plugins/_ml/mcp_tools/_register
+POST /_plugins/_ml/mcp/tools/_register
 {
     "tools": [
         {
