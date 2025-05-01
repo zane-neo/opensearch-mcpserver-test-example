@@ -12,9 +12,9 @@ import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
-        McpClientTransport transport = HttpClientSseClientTransport.builder("http://localhost:9200/_plugins/_ml")
+        McpClientTransport transport = HttpClientSseClientTransport.builder("http://localhost:9200/_plugins/_ml/mcp")
                 .customizeClient(clientBuilder -> {
-            clientBuilder.connectTimeout(Duration.ofSeconds(1));
+            clientBuilder.connectTimeout(Duration.ofSeconds(1000));
         }).build();
         McpSyncClient client = McpClient.sync(transport)
                 .requestTimeout(Duration.ofSeconds(10000))
